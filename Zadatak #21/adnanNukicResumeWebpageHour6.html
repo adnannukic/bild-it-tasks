@@ -1,0 +1,382 @@
+<!--U prvom satu zadaće određen je idejni plan izgleda stranice i početak pisanja code-a. Uređena je profilna slika na način da joj je uklonjena pozadina. Time je bila spremna za korištenje na buduoj stranici.
+Upisani su odgovarajući meta tagovi. Stranica bi trebala biti podijeljena na tri dijela: header, body and footer. Svaki od ovih će biti jedna sekcija.
+Postavljena boja pozadine, margine i odstojanje na 0. Pauzirao sam štopericu i otišao sam jesti na 15min. Nakon pauze, postavljena je sekcija header i vrši se njeno stiliziranje.
+U toku prvog sata radi se najviše uređivanje header sekcije.-->
+
+<!--U drugom satu nastavlja se uređivanje sekcije header. Nakon toga, pokušao sam kreirati padajući meni, koji bi izbacivao
+sadržaj kontakata, adrese i kratke biografije, nakon uočavanja da to ne bih mogao uraditi u 6h prelazim dalje, trenutno odustajući
+od tog cilja. Prelazim u kreiranje ostatka stranice. Dio kratka biografija će biti ispod sadržaja cijele stranice i footer sekcije u -->
+
+<!--U trećem satu postavljen je kostur body, footer i short biography sekcije. U narednom satu se planira stilizirati body sekcija i polako prilagođavati stranica svim uređajima.-->
+
+<!--U četvrtom satu reducirao sam dio koda i uredio sekciju body. Promjena plana, sekcija short biograpy će biti postavljena iznad sekcije footer i uzimat će klasu body 1. Glavno stiliziranje stranice je gotovo,
+ prelazim na prilagođavanje stranice svim uređajima.-->
+
+<!--U petom satu rad na pravljenju stranice kompaktibilne sa svim uređajima.-->
+
+<!--U posljednjem šestom satu, postojeću stranicu sam učinio kompaktibilnom i sa uređajima manje rezoucije, tehnikama korištenja viewport jedinica za responzivnu tipografiju.
+Imao sam problema sa @media query-ma, ali aktivno ću raditi na vježbanju i korektnom apliciranju istih.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal Resume - Responsive Webpage">
+        <meta name="author" content="Adnan Nuki&cacute;">
+        <meta name="viewport" content="widtt=device-width, initial-scale=1.0">
+        <meta name="keywords" content="resume, personal resume, Webpage, responsive webpage, cv, CSS, HTML">
+        <title>Adnan Nuki&cacute; - Personal Resume - Responsive Webpage</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #EE6C4D;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .profile-picture {
+                border: #98C1D9 2px solid;
+                border-radius: 30%;
+                width: 15vw;
+                margin: 10px 0 10px 0;
+                background-color: #EE6C4D;
+                box-shadow: 0 10px 15px 0 rgba(141, 134, 134, 0.4);
+            }
+            .header-section {
+                background-color: #3D3D3D;
+                padding-left: 2%;
+                padding-right: 2%;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+            }
+            .header-section h1 {
+                color: #98C1D9;
+                font-family: cursive;
+                font-size: 2.5vw;
+                align-self: center;
+            }
+            .header-section h1:hover {
+                scale: 1.2;
+                color: #E0FBFC;
+            }
+            .header-section h2 {
+                color: #98C1D9;
+                font-family: cursive;
+                margin: 2vw;
+                position: relative;
+                font-size: 3vw;
+            }
+            .header-section ul li {
+                color: #E0FBFC ;
+                margin: 2vw;
+                font-size: 1.5vw;
+            }
+            .body-1 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 3vh 2vw 3vh 2vw;
+            }
+            .column-1 {
+                position: relative;
+                margin-top: 2%;
+                flex-basis: 40%;
+                border: solid 0.1vw #293241;
+                box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+                border-radius: 5px;
+                background-color: #E0FBFC;
+                color: #3d5a80;
+                height: 47vw;
+            }
+            .column-1:hover {
+                scale: 1.1;
+            }
+            .column-1 ul {
+                padding-top: 2vw;
+                padding-left: 6vw;
+                padding-right: 4vw;
+            }
+            .column-1 li {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding: 1%;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+            .column-1 p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding-top: 2vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                text-align: justify;
+            }
+            .column-1 h3 {
+                font-family: monospace;
+                font-size: 2vw;
+                color: #293241;
+                padding: 10px;
+                margin-left: 4vw;
+            }
+            .column-2 {
+                position: relative;
+                margin-top: 2%;
+                flex-basis: 40%;
+                border: solid 0.1vw #293241;
+                box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+                border-radius: 5px;
+                background-color: #E0FBFC;
+                color: #3d5a80;
+                height: 35vw;
+            }
+            .column-2:hover {
+                scale: 1.1;
+            }
+            .column-2 ol {
+                padding-top: 2vw;
+                padding-left: 6vw;
+                padding-right: 4vw;
+            }
+            .column-2 ul {
+                padding-top: 2vw;
+                padding-left: 6vw;
+                padding-right: 4vw;
+            }
+            .column-2 li {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding: 1%;
+            }
+            .column-2 p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding-top: 2vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                text-align: justify;
+            }
+            .column-2 h3 {
+                font-family: monospace;
+                font-size: 2vw;
+                color: #293241;
+                padding: 10px;
+                margin-left: 4vw;
+            }
+            .column-3 {
+                position: relative;
+                margin-top: 2%;
+                flex-basis: 40%;
+                border: solid 0.1vw #293241;
+                box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+                border-radius: 5px;
+                background-color: #E0FBFC;
+                color: #3d5a80;
+                height: 45vw;
+            }
+            .column-3:hover {
+                scale: 1.1;
+            }
+            .column-3 p {
+                font-size: 1.5vw;
+                padding-top: 2vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                text-align: justify;;
+            }
+            .column-3 h3 {
+                font-family: monospace;
+                font-size: 2vw;
+                color: #293241;
+                padding: 10px;
+                margin-left: 4vw;
+            }
+            .column-4 {
+                position: relative;
+                margin-top: 2%;
+                flex-basis: 40%;
+                border: solid 0.1vw #293241;
+                box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .3);
+                border-radius: 5px;
+                background-color: #E0FBFC;
+                color: #3d5a80;
+                height: 24vw;
+            }
+            .column-4:hover {
+                scale: 1.1;
+            }
+            .column-4 ul {
+                padding-top: 2vw;
+                padding-left: 6vw;
+                padding-right: 4vw;
+            }
+            .column-4 li {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding: 1%;
+            }
+            .column-4 p {
+                font-family: monospace;
+                font-size: 1.5vw;
+                padding-top: 2vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                text-align: justify;
+            }
+            .column-4 h3 {
+                font-family: monospace;
+                font-size: 2vw;
+                color: #293241;
+                padding: 10px;
+                margin-left: 4vw;
+            }
+            .footer-section {
+                background-color: #3D3D3D;
+                padding-left: 2%;
+                padding-right: 2%;
+                margin: 3% 0% 1% 0%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer-section h4 {
+                font-size: 2.2vw;
+                font-family: cursive;
+                color: #98C1D9;
+                margin-right: 1vw;
+            }
+            .icon {
+                width: 4vw;
+                margin: 1vw;
+                border: solid #98C1D9 2px;
+                border-radius: 50%;
+            }
+            @media (max-width: 700px;) {
+                .body-1 {
+                    flex-direction: column-reverse;
+                }
+                .footer-section {
+                    flex-direction: column-reverse;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <section class="header-section">
+            <img class="profile-picture" src="adnanNukic.png" alt="My Profile Picture">
+            <div> 
+                <h2>Adress</h2>
+                    <ul>
+                        <li><b>Country: </b>Bosnia & Herzegovina</li>
+                        <li><b>City: </b>&Zcaron;ivinice</li>
+                        <li><b>Adress: </b> 	&Dstrok;ur&dstrok;evik, Nuki&cacute;i bb</li>
+                        <li><b>Postal code: </b>75272</li>
+                    </ul>
+            </div>
+            <div>
+                <h2>Contacts</h2>
+                <ul>
+                    <li><b>Phone 1: </b>060 30 27 69 1</li>
+                    <li><b>Phone 2: </b>064 40 57 97 4</li>
+                    <li><b>E-mail: </b>adnannukic3@gmail.com</li>
+                   
+                </ul>
+            </div>
+            <h1>Adnan Nuki&cacute;<br>
+                Lightning Engineering
+            </h1>
+        </section> 
+
+        <section class="body-1">    
+            <div class="column-2">
+                <h3>Education</h3>
+                <ol>
+                    <li>JU O&Scaron; &Dstrok;ur&dstrok;evik <strong>2004-2012</strong></li>
+                    <li>JU MS&Scaron; &Zcaron;ivinice / Electrical energy technician <strong>2012-2016</strong></li>
+                    <li>Faculcy of Electrical Engineering in Tuzla / Bachelor - electrical engineer / Power grids and systems <strong>2016-2020</strong></li>
+                </ol>
+            </div>
+            <div class="column-2">
+                <h3>Communication</h3>
+                <p>
+                Good communication skills acquired through numerous school project and membership in the student council local organized works, work in the electrotechnical school and in a company that designs and manufactures LED lighting.
+                </p>
+            </div>
+        </section>
+
+        <section class="body-1">
+            <div class="column-4">
+                <h3>Work experience</h3>
+                <ul>
+                    <li>JU MS&Scaron; &Zcaron;ivinice / Electrotechnical school <strong>2021</strong></li>
+                    <li>LED Vision d.o.o. <strong>2021</strong></li>
+                </ul>
+            </div>
+            <div class="column-4">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Bosnian</li>
+                    <li>English (B-C)</li>
+                    <li>German (A)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="body-1">
+            <div class="column-1">
+                <h3>Interests</h3>
+                <ul>
+                    <li>Energy</li>
+                    <li>Ecology</li>
+                    <li>Gaming</li>
+                    <li>Hiking</li>
+                    <li>Politics</li>
+                    <li>Poetry</li>
+                    <li>Sports</li>
+                    <li>Fitness</li>
+                </ul>
+            </div>
+            <div class="column-1">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Driving license B1 &amp; B</li>
+                    <li>HTML &amp; CSS</li>
+                    <li>Multisim &amp; Logixpro</li>
+                    <li>AutoCAD (basics)</li>
+                    <li>LaTeX</li>
+                    <li>Microsoft Office</li> 
+                    <li>Nitro</li>
+                    <li>PSS/e (basics)</li>
+                    <li>DIALux</li>
+                    <li>RELUX</li>
+                    <li>Adobe Photoshop</li>
+                    <li>GIMP</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="body-1">
+            <div class="column-3">
+                <h3>Short Biography</h3>
+                <p>
+                <i>My name is Adnan Nuki&cacute;. I&apos;am 24 years old, born in Tuzla back in 1998. I have a university degree in electrical engineering. I&apos;am currently unemployed. My goal is to find a job that will suit my desires, abilities and education, and enable career advancement. I&apos;am a team worker who build strong team ties by encouraging colleagues to succeed. Also, I&apos;am a worker who is ready for field work, home work and overtime work. I live in &Zcaron;ivinice. I studied at the Faculty of Electrical Engineering in Tuzla. I want to contribute to every job I work on with my skills and constant learning of new ones.So far, I have succeeded in business assignments. My biggest hobby is hiking.</i>
+                </p>
+            </div>
+    </section> 
+        
+        <section class="footer-section">
+            <h4>You can find me on:</h4><br>
+            <img class="icon" src="facebook.png" alt="Facebook logo icon">
+            <img class="icon" src="instagram.png" alt="Instagram logo icon">
+            <img class="icon" src="linkedin.png" alt="LinkedIN logo icon">
+        </section> 
+    </body>
+</html> 

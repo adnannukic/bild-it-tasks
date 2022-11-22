@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--page description-->
+        <meta charset="utf-8">
+        <meta name="description" content="CV-Adnan Nukic">
+        <meta name="keywords" content="CV, Curriculum Vitae, Zivotopis, CSS, HTML">
+        <meta name="author" content="Adnan Nukic">
+        <meta http-equiv="refresh" content="60">
+        <title>Adnan Nukic - Curriculum Vitae [CV] - Resume</title>
+        <!--box-shadow: offset-x, offset-y, blur-radius, spread-radius, color-->
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .head {
+                min-height: 40vh;
+                width: 100%;
+                background-color: #b85042;
+                position: relative;
+                background-position: center;
+                border: 3px solid #a7beae;
+            }
+            .body {
+                min-height: 150vh;
+                width: 100%;
+                background-color: #e7e8d1;
+                position: relative;
+                background-position: center;
+                border: 3px solid #a7beae;
+            }
+            .foot {
+                min-height: 5vh;
+                width: 100%;
+                background-color: #b85042;
+                position: relative;
+                background-position: center;
+                border: 3px solid #a7beae;
+            }
+            .naslov {
+                position: relative;
+                width: 100%;
+                top: 20px;
+            }
+            h1 {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color:#e7e8d1;
+                text-align: center;
+            }
+            h2 {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: #e7e8d1;
+                text-align: center;
+            }
+            h3, h4 {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: #b85042;
+                padding-bottom: 2vh;
+                padding-top: 2vh;
+                padding-left: 2vw;
+                font-size: larger;
+            }
+            #profile-img {
+                
+                width: 20vw;
+                height: 40vh;
+                border-radius: 50%;
+                border: 1px solid black;
+                box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 10px 10px rgba(0,0,0,0.23); 
+            }
+            .kontakti {
+                position: relative;
+                left: 6vw;
+                text-align: left;
+                font-size: larger;
+                font-style: italic;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: #e7e8d1;
+            }
+            p {
+                color: darkslategrey;
+                padding-left: 5vw;
+                text-align: justify;
+                padding-right: 5vw;
+            } 
+            .adresa {
+                position: relative;
+                left: 10vw;
+                text-align: left;
+                font-size: larger;
+                font-style: italic;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: #e7e8d1;
+            }
+            .profile-img-kontakti-adresa {
+                display: flex;
+                padding: 2% 6%;
+                align-items: center;
+            }
+            a:link {
+                color: #e7e8d1,;
+            }
+            a:hover {
+                color: #a7beae;
+                font-size: 105%;
+                transition: .5s;
+            }
+            a:visited {
+                color: #a7beae;
+            }
+            a:active {
+                color: #a7beae;
+            }
+            .ul {
+                list-style: symbols(*);
+                color: darkslategray;
+                text-align: justify;
+                padding-left: 5vw;
+            }
+            .ol {
+                list-style: lower-roman;
+                color: darkslategray;
+                text-align: justify;
+                padding-left: 5vw;
+            }
+            #p-radio {
+                color:#e7e8d1;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-left: 20vw;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                font-size: smaller;
+            }
+        </style>
+    </head>
+    <body>
+        <!--presented content-->
+        <section class="head">
+            <div class="naslov">
+                <h1>ADNAN NUKIĆ</h1>
+                <!--applying for this position / job title-->
+                <h2><i>&quot;Lighting development engineer&quot;</i></h2>
+            </div>
+            <div class="profile-img-kontakti-adresa">
+            <a href="newresume.adnannukic.html"><img id="profile-img" src="adnannukic.JPG" alt="profilna slika"></a>
+                <div class="kontakti">
+                    <ul>
+                        <li><b>Mob.: </b>+387 60 30 27 69 1</li>
+                        <li><b>Mob.: </b>+387 64 40 57 97 4</li>
+                        <li><b>LinkedIN: </b><a href='https://www.linkedin.com/in/adnan-nuki%C4%87-1b4776202/' target='_blank' title='I was born in 90&apos;'>https://www.linkedin.com/in/adnan-nuki%C</a></li>
+                        <li><b>E-mail: </b>adnannukic3@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="adresa">
+                    <ul>
+                        <li><b>Country: </b>Bosnia & Herzegovina</li>
+                        <li><b>City: </b>Živinice</li>
+                        <li><b>Adress:</b> Đurđevik, Nukići bb</li>
+                        <li><b>Postal code: </b>75272</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--body-->
+        <section class="body">
+            <!--education-->
+            <h3>Education</h3>
+                <ol class="ol">
+                    <li>JU OŠ Đurđevik <strong>2004-2012</strong></li>
+                    <li>JU MSŠ Živinice / Electrical energy technician <strong>2012-2016</strong></li>
+                    <li>Faculcy of Electrical Engineering in Tuzla / Bachelor - electrical engineer / Power grids and systems <strong>2016-2020</strong></li>
+                </ol>
+            <!--communication-->
+            <h3>Communication</h3>
+                <p>
+                Good communication skills acquired through numerous school project and membership in the student council local <br>
+                organized works, work in the electrotechnical school and in a company that designs and manufactures LED lighting.
+                </p>
+            <!--work experience-->
+            <h3>Work experience</h3>
+                <ul class="ul">
+                    <li>JU MSŠ Živinice / Electrotechnical school <strong>2021</strong></li>
+                    <li>LED Vision d.o.o. <strong>2021</strong></li>
+                </ul>
+            <!--languages-->
+            <h3>Languages</h3>
+                <ul class="ul">
+                    <li>Bosnian</li>
+                    <li>English (B-C)</li>
+                    <li>German (B)</li>
+                </ul>
+            <!--skills-->
+            <h3>Skills</h3>
+                <ul class="ul">
+                    <li>Driving license B1 &amp; B</li>
+                    <li>HTML &amp; CSS</li>
+                    <li>Multisim</li>
+                    <li>Logixpro</li>
+                    <li>AutoCAD (basics)</li>
+                    <li>LaTeX</li>
+                    <li>Microsoft Office & Nitro</li>
+                    <li>PSS/e (basics)</li>
+                    <li>DIALux</li>
+                    <li>RELUX</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+            <!--interests-->
+            <h3>Interests</h3>
+                <ul class="ul">
+                    <li>Energy</li>
+                    <li>Ecology</li>
+                    <li>Gaming</li>
+                    <li>Hiking</li>
+                    <li>Politics</li>
+                    <li>Poetry</li>
+                    <li>Sports</li>
+                    <li>Fitness</li>
+                </ul>
+            <!--short biography-->
+            <h4>Short biography</h4>
+                <p>
+                I&apos;am 24 years old, born in Tuzla back in 1998. I have a university degree in electrical engineering. My goal is to find a job that will suit my desires, abilities and education,
+                and enable career advancement. So, that is why I apply for this job. I think it corresponds to the stated wishes. I&apos;am a team worker who is also ready for field work, home work and overtime work.
+                </p>
+        </section>
+        <!--foot-->
+        <section class="foot">
+            <div id="p-radio">
+                <p id="p-radio">
+                    Do you like this cv page ??? &#129300; 
+                <form>
+                        <label for="YES">
+                            <input id="YES" type="radio" name="YES-NO" checked> YES
+                        </label>
+                        <label for="NO">
+                            <input id="NO" type="radio" name="YES-NO" disabled> NO
+                        </label>
+                        <button type="submit">Got ya &#128526;</button>
+                </form>
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

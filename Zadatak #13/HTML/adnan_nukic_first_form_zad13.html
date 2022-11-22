@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>HTML First Form</title>
+    </head>
+    <style>
+        input[type], textarea {
+            width: 150px;
+            display: block;
+            margin-bottom: 3px;
+        }
+    </style>
+    <body>
+        <form action="adnan_nukic_submit.php" method="post">
+            <fieldset>
+                <legend>First form</legend>
+                <label for="firstform">First Label</label>
+                <input id="firstform" name="firstform" type="text"><br>
+                <label for="secondform">Second Label</label>
+                <textarea rows="5" cols="40" id="secondform"></textarea>
+                <label for="thirdform">Third Label</label>
+                <select name="thirdform" id="thirdform">
+                    <option value="first">First option</option>
+                    <option value="second">Second option</option>
+                    <option value="third">Third option</option>
+                </select><br>
+                <button type="submit" value="Test">Submit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>HTML Form Atributes</title>
+   
+    </head>
+    <body>
+        <form action="first.php" method="post">
+            <fieldset>
+                <legend>First form</legend>
+                <label for="firstform">First Label</label>
+                <input id="firstform" name="firstform" type="text"><br>
+                <label for="secondform">Second Label</label>
+                <textarea rows="5" cols="40" id="secondform"></textarea>
+                <label for="thirdform">Third Label</label>
+                <select name="thirdform" id="thirdform">
+                    <option value="first">First option</option>
+                    <option value="second">Second option</option>
+                    <option value="third">Third option</option>
+                </select><br>
+                <label>
+                    <input type="checkbox" name="first" value="first" checked> First
+                    <input type="checkbox" name="second" value="second"> Second
+                    <input type="checkbox" name="third" value="third"> Third
+                </label> <br>
+                <label>
+                    <input type="radio" name="firs" value="first" id="first"> First
+                    <input type="radio" name="second" value="second" id="second"> Second
+                    <input type="radio" name="third" value="third" id="third"> Third
+                </label> <br>
+                <button type="submit" value="Test">Submit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
